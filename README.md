@@ -44,7 +44,9 @@ $criteria = (new CriteriaBuilder())
                   ->orderBy('name', 'DESC')
 ;
 
-// Array of products
+$repository->setMapperObject(Product::class);
+
+// Array of object Product
 $products = $repository->collection('products')
                        ->matching($criteria);
 ```
