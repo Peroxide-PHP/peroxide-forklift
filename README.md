@@ -34,7 +34,6 @@ use Peroxide\Forklift\GenericRepository;
 use Peroxide\Forklift\Adapter\InMemoryAgent;
 
 $repository = new GenericRepository(new InMemoryAgent());
-$repository->setCollection('products');
 
 // Produce a Query like:
 // name = 'My product' AND active is true
@@ -46,5 +45,6 @@ $criteria = (new CriteriaBuilder())
 ;
 
 // Array of products
-$products = $repository->matching($criteria);
+$products = $repository->collection('products')
+                       ->matching($criteria);
 ```
