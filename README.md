@@ -37,12 +37,12 @@ $repository = new GenericRepository(new InMemoryAgent());
 $repository->setCollection('products');
 
 // Produce a Query like:
-// name = 'My product' and active => true
-// 
-$criteria = new Criteria();
-$criteria->equal('name', 'My product')
-         ->equal('active', true)
-         ->orderBy('name', 'DESC')
+// name = 'My product' AND active is true
+// ORDER BY name DESC
+$criteria = (new CriteriaBuilder())
+                  ->equal('name', 'My product')
+                  ->equal('active', true)
+                  ->orderBy('name', 'DESC')
 ;
 
 // Array of products
