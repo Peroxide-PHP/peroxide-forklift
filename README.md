@@ -22,7 +22,8 @@ $repository->setCollection('products');
 
 $entity = new Product();
 
-// Persisting an Entity in products collection
+// Persisting an Entity in products collection in memory
+// ex: array{'products': [ Product{...} ]}
 $repository->save($entity);
 $repository->flush();
 ```
