@@ -15,9 +15,9 @@ ORM/ActiveRecords implementations
 <?php
 
 use Peroxide\Forklift\GenericRepository;
-use Peroxide\Forklift\Adapter\InMemoryAgent;
+use Peroxide\Forklift\Adapter\InMemoryStrategy;
 
-$repository = new GenericRepository(new InMemoryAgent());
+$repository = new GenericRepository(new InMemoryStrategy());
 $repository->setCollection('products');
 
 $entity = new Product();
@@ -32,9 +32,11 @@ $repository->flush();
 <?php
 
 use Peroxide\Forklift\GenericRepository;
-use Peroxide\Forklift\Adapter\InMemoryAgent;
+use Peroxide\Forklift\Adapter\InMemoryStrategy;
 
-$repository = new GenericRepository(new InMemoryAgent());
+$repository = new GenericRepository(
+  new InMemoryStrategy(require __DIR__ . '/dump_db_array.php')
+);
 
 // Produce a Query like:
 // name = 'My product' AND active is true
