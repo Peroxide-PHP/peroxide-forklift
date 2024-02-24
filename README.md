@@ -3,9 +3,10 @@
 Forklift a Generic Repository Pattern engine, made to support multiple abstraction of Domain-Driven Design repository implementations.
 
 ORM/ActiveRecords implementations
-- PHP InMemory - In progress
+- PHP InMemory - Starting papers
 - Laravel Eloquent - In progress
 - Doctrine ORM - In progress
+- MongoDB - In progress
 - Redis - In progress
 - REST (Guzzle) - In progress
 
