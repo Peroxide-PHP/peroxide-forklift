@@ -54,3 +54,14 @@ $repository->setMapperObject(Product::class);
 $products = $repository->collection('products')
                        ->matching($criteria);
 ```
+## Patterns Included
+1. Generic Repository
+2. Specification
+3. Filter/Criteria
+4. Data Mapping
+5. Unity Of Work
+6. State
+7. Flyweight
+8. Iterator
+9. Strategy
+10. Chain of Responsibility
