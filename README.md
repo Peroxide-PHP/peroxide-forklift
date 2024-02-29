@@ -1,4 +1,4 @@
-# Forklift
+# Peroxide - Forklift
 
 Forklift a Generic Repository Pattern engine, made to support multiple abstraction of Domain-Driven Design repository implementations.
 
